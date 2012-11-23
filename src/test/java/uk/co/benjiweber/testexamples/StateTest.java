@@ -5,6 +5,7 @@ import static com.google.common.collect.Lists.newArrayList;
 import static com.google.common.collect.Sets.cartesianProduct;
 import static java.util.EnumSet.allOf;
 import static org.junit.Assert.assertEquals;
+import static uk.co.benjiweber.testexamples.StateTest.Result.NOT_OK;
 import static uk.co.benjiweber.testexamples.StateTest.Result.OK;
 import static uk.co.benjiweber.testexamples.StateTest.State.FIRST_STATE;
 import static uk.co.benjiweber.testexamples.StateTest.State.SECOND_STATE;
@@ -32,7 +33,7 @@ public class StateTest {
 		} else if (a == SECOND_STATE && b == SECOND_STATE) {
 			expectedResult = OK;
 		} else {
-			expectedResult = Result.NOT_OK;
+			expectedResult = NOT_OK;
 		}
 	}
 
