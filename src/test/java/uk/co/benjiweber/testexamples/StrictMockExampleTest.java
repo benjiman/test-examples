@@ -2,15 +2,10 @@ package uk.co.benjiweber.testexamples;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.Answers;
-import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
-import uk.co.benjiweber.mockito.MockUtils;
 
 import static org.mockito.Mockito.*;
-import static uk.co.benjiweber.mockito.MockUtils.NotStubbedException;
-import static uk.co.benjiweber.mockito.MockUtils.strictMock;
-import static uk.co.benjiweber.mockito.MockUtils.verifyNoUnstubbedInteractions;
+import static uk.co.benjiweber.mockito.MockUtils.*;
 
 @RunWith(MockitoJUnitRunner.class)
 public class StrictMockExampleTest {
@@ -40,6 +35,7 @@ public class StrictMockExampleTest {
     public void exampleOfRedundantVerify() throws Exception {
         Duck duck = mock(Duck.class);
         when(duck.quack()).thenReturn("quack");
+        when(duck.waddle()).thenReturn("waddle");
 
         duck.quack();
         duck.waddle();
